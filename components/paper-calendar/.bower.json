@@ -1,5 +1,6 @@
 {
   "name": "paper-calendar",
+  "version": "0.0.2",
   "keywords": "seed, polymer, web-components, paper, material-design",
   "main": "paper-calendar.html",
   "dependencies": {
@@ -10,14 +11,14 @@
     "moment-range": "~1.0.2"
   },
   "homepage": "https://github.com/Wenqer/paper-calendar",
-  "_release": "8431af7f34",
+  "_release": "0.0.2",
   "_resolution": {
-    "type": "branch",
-    "branch": "master",
-    "commit": "8431af7f342c4b2aacb23860a37d21c22fdb0466"
+    "type": "version",
+    "tag": "v0.0.2",
+    "commit": "50229d55101a92f0e9f74a53a7f49e1c63e4941f"
   },
   "_source": "git://github.com/Wenqer/paper-calendar.git",
-  "_target": "*",
+  "_target": "~0.0.2",
   "_originalSource": "Wenqer/paper-calendar",
   "_direct": true
 }

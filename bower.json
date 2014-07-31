@@ -3,5 +3,8 @@
   "private": true,
   "dependencies": {
     "paper-calendar": "Wenqer/paper-calendar#master"
+  },
+  "resolutions": {
+    "paper-calendar": "~0.0.2"
   }
 }
