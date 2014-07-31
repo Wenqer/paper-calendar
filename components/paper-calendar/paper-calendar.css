@@ -1,5 +1,6 @@
 :host {
   display: block;
+  max-width: 200px;
 }
 .field {
   position: relative;
@@ -17,9 +18,13 @@
   border-radius: 6px;
   padding: 10px;
   position: absolute;
-  right: -110%;
-  top: 10px;
+  margin-left: 10px;
+  top: -10px;
   text-align: center;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 30px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 #calendar.show {
   display: block;

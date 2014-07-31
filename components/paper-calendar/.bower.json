@@ -10,13 +10,14 @@
     "moment-range": "~1.0.2"
   },
   "homepage": "https://github.com/Wenqer/paper-calendar",
-  "_release": "ba48bb4dc9",
+  "_release": "8431af7f34",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "ba48bb4dc9d60823f1973e6b474f12d6cd691d6c"
+    "commit": "8431af7f342c4b2aacb23860a37d21c22fdb0466"
   },
   "_source": "git://github.com/Wenqer/paper-calendar.git",
-  "_target": "master",
-  "_originalSource": "Wenqer/paper-calendar"
+  "_target": "*",
+  "_originalSource": "Wenqer/paper-calendar",
+  "_direct": true
 }
