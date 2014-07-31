@@ -88,7 +88,7 @@ Polymer({
     this.date = this.now.format(this.format);
   },
   setNowDate: function() {
-    var now = moment([this.day, this.month, this.year].join(' '), 'DD MMMM YYYY');
+    var now = moment([this.day, this.month, this.year].join(' '), 'D MMMM YYYY');
     if (now.isValid()) {
       this.now = now;
     } else if (this.day > moment(this.month, 'MMMM').daysInMonth()) {
@@ -109,7 +109,7 @@ Polymer({
     };
   },
   updateDate: function() {
-    this.day = this.now.format('DD');
+    this.day = this.now.format('D');
     this.month = this.now.format('MMMM');
     this.year = this.now.format('YYYY');
     this.item = this[this.views[this.view].item];
