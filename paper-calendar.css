@@ -1,0 +1,64 @@
+:host {
+  display: block;
+}
+.field {
+  position: relative;
+}
+#date-input {
+  padding: 6px;
+}
+#calendar {
+  width: 300px;
+  display: none;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 30px;
+  background-color: #eee;
+  border-radius: 6px;
+  padding: 10px;
+  position: absolute;
+  right: -110%;
+  top: 10px;
+  text-align: center;
+}
+#calendar.show {
+  display: block;
+}
+.calendar-head {
+  background: #4285f4;
+  color: #fff;
+}
+#content {
+  margin-bottom: 10px;
+}
+.header {
+  text-align: center;
+}
+.days {
+  width: 40px;
+}
+.days.fade {
+  color: #c9c9c9;
+}
+.months {
+  width: 100px;
+}
+
+.years {
+  width: 60px;
+}
+.days.core-selected,
+.months.core-selected,
+.years.core-selected {
+  background-color: #c9c9c9;
+}
+
+paper-button.colored {
+  color: #4285f4;
+  fill: #4285f4;
+}
+
+paper-button[simpleButton].colored {
+  background: #4285f4;
+  color: #fff;
+}

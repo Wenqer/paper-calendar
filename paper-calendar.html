@@ -1,0 +1,51 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../paper-button/paper-button.html">
+<link rel="import" href="../paper-shadow/paper-shadow.html">
+<link rel="import" href="../paper-input/paper-input.html">
+<link rel="import" href="../core-icons/core-icons.html">
+<link rel="import" href="../core-field/core-field.html">
+<link rel="import" href="../core-toolbar/core-toolbar.html">
+<link rel="import" href="../core-selector/core-selector.html">
+
+<script src="../moment/moment.js"></script>
+<script src="../moment-range/lib/moment-range.js"></script>
+
+<!--
+Element providing solution to no problem in particular.
+
+##### Example
+
+    <paper-calendar></paper-calendar>
+
+@element paper-calendar
+@blurb Element providing solution to no problem in particular.
+@status alpha
+@homepage http://Wenqer.github.io/paper-calendar
+-->
+
+<polymer-element name="paper-calendar">
+  <template>
+    <link rel="stylesheet" href="paper-calendar.css">
+    <core-field class="field">
+      <paper-input floatingLabel label="Set date" value="{{ date }}" flex></paper-input>
+      <core-icon icon="apps" on-click="{{ toggleInput }}"></core-icon>
+      <div id="calendar" vertical layout center-justified>
+        <paper-shadow z="2"></paper-shadow>
+        <core-toolbar class="calendar-head">
+          <paper-icon-button icon="arrow-back" on-click="{{ prev }}"></paper-icon-button>
+          <paper-button flex class="header" label="{{ header }}" on-click="{{ nextView }}"></paper-button>
+          <paper-icon-button icon="arrow-forward" on-click="{{ next }}"></paper-icon-button>
+        </core-toolbar>
+        <core-selector valueattr="data-value" selected="{{ item }}" target="{{$.content}}" itemsSelector=".active"></core-selector>
+        <div id="content" horizontal layout wrap justified>
+          <template id="days" repeat="{{ item in items }}">
+            <paper-button class="{{ type }} {{ item.cl }}" label="{{ item.label }}" data-value="{{ item.val }}" on-click="{{ setItem }}"></paper-button>
+          </template>
+        </div>
+        <paper-button simpleButton class="colored" label="Today" on-click="{{ ready }}"></paper-button>
+      </div>
+    </core-field>
+  </template>
+  <script src="paper-calendar.js"></script>
+</polymer-element>
