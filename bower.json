@@ -1,7 +1,7 @@
 {
   "name": "paper-calendar",
   "version": "0.0.2",
-  "keywords": "seed, polymer, web-components, paper, material-design",
+  "keywords": ["seed", "polymer", "web-components", "paper", "material-design"],
   "main": "paper-calendar.html",
   "dependencies": {
     "core-elements": "Polymer/core-elements#~0.3.4",
