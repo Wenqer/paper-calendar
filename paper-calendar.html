@@ -29,31 +29,29 @@ Element providing solution to no problem in particular.
     <link rel="stylesheet" href="paper-calendar.css">
     <core-field class="field">
       <paper-input floatingLabel label="Set date" value="{{ date }}" flex></paper-input>
-      <core-icon icon="apps" on-click="{{ toggleInput }}"></core-icon>
+      <core-icon icon="fa:calendar" on-click="{{ toggleInput }}"></core-icon>
+      <paper-shadow z="2">
+        <div id="calendar" vertical layout center-justified>
 
-      <div id="calendar" vertical layout center-justified>
-        <paper-shadow z="2"></paper-shadow>
+          <core-toolbar class="calendar-head">
+            <paper-icon-button icon="arrow-back" on-click="{{ prev }}"></paper-icon-button>
+            <span flex class="header" on-click="{{ nextView }}">{{ header }}</span>
+            <paper-icon-button icon="arrow-forward" on-click="{{ next }}"></paper-icon-button>
+          </core-toolbar>
 
-        <core-toolbar class="calendar-head">
-          <paper-icon-button icon="arrow-back" on-click="{{ prev }}"></paper-icon-button>
-          <button flex class="header" on-click="{{ nextView }}">{{ header }}</button>
-          <paper-icon-button icon="arrow-forward" on-click="{{ next }}"></paper-icon-button>
-        </core-toolbar>
+          <core-selector valueattr="data-value" selected="{{ item }}" target="{{$.content}}" itemsSelector=".active"></core-selector>
 
-        <core-selector valueattr="data-value" selected="{{ item }}" target="{{$.content}}" itemsSelector=".active"></core-selector>
+          <div id="content" horizontal layout wrap>
+            <template id="days" repeat="{{ item in items }}">
+              <span class="{{ type }} {{ item.cl }}" data-value="{{ item.val }}" on-click="{{ setItem }}">
+                {{ item.label }}
+              </span>
+            </template>
+          </div>
 
-        <div id="content" horizontal layout wrap>
-          <template id="days" repeat="{{ item in items }}">
-            <span class="{{ type }} {{ item.cl }}"
-              data-value="{{ item.val }}"
-              on-click="{{ setItem }}">
-              {{ item.label }}
-            </span>
-          </template>
+          <span class="today" on-click="{{ ready }}">Today</span>
         </div>
-
-        <button on-click="{{ ready }}">Today</button>
-      </div>
+      </paper-shadow>
     </core-field>
   </template>
   <script src="paper-calendar.js"></script>
