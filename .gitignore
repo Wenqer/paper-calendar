@@ -3,3 +3,4 @@ components
 dist
 .sass-cache
 .tmp
+bower_components

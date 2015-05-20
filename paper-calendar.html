@@ -30,20 +30,29 @@ Element providing solution to no problem in particular.
     <core-field class="field">
       <paper-input floatingLabel label="Set date" value="{{ date }}" flex></paper-input>
       <core-icon icon="apps" on-click="{{ toggleInput }}"></core-icon>
+
       <div id="calendar" vertical layout center-justified>
         <paper-shadow z="2"></paper-shadow>
+
         <core-toolbar class="calendar-head">
           <paper-icon-button icon="arrow-back" on-click="{{ prev }}"></paper-icon-button>
-          <paper-button flex class="header" label="{{ header }}" on-click="{{ nextView }}"></paper-button>
+          <button flex class="header" on-click="{{ nextView }}">{{ header }}</button>
           <paper-icon-button icon="arrow-forward" on-click="{{ next }}"></paper-icon-button>
         </core-toolbar>
+
         <core-selector valueattr="data-value" selected="{{ item }}" target="{{$.content}}" itemsSelector=".active"></core-selector>
-        <div id="content" horizontal layout wrap justified>
+
+        <div id="content" horizontal layout wrap>
           <template id="days" repeat="{{ item in items }}">
-            <paper-button class="{{ type }} {{ item.cl }}" label="{{ item.label }}" data-value="{{ item.val }}" on-click="{{ setItem }}"></paper-button>
+            <span class="{{ type }} {{ item.cl }}"
+              data-value="{{ item.val }}"
+              on-click="{{ setItem }}">
+              {{ item.label }}
+            </span>
           </template>
         </div>
-        <paper-button simpleButton class="colored" label="Today" on-click="{{ ready }}"></paper-button>
+
+        <button on-click="{{ ready }}">Today</button>
       </div>
     </core-field>
   </template>

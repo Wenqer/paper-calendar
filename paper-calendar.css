@@ -2,6 +2,7 @@
   display: block;
   max-width: 200px;
 }
+
 .field {
   position: relative;
 }
@@ -59,7 +60,7 @@
 }
 
 paper-button.colored {
-  color: #4285f4;
+  color: white;
   fill: #4285f4;
 }
 
