@@ -4,7 +4,7 @@
   "description": "paper-calendar",
   "main": "paper-calendar.js",
   "scripts": {
-    "server": "./node_modules/polyserve/bin/polyserve"
+    "start": "./node_modules/polyserve/bin/polyserve"
   },
   "repository": {
     "type": "git",
