@@ -2,23 +2,23 @@
   display: block;
   max-width: 200px;
 }
+
 .field {
   position: relative;
 }
+
 #date-input {
   padding: 6px;
 }
+
 #calendar {
-  width: 300px;
+  width: 320px;
   display: none;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
   background-color: #eee;
   border-radius: 6px;
-  padding: 10px;
   position: absolute;
   margin-left: 10px;
+  padding-bottom: 10px;
   top: -10px;
   text-align: center;
   font-size: 18px;
@@ -26,44 +26,83 @@
   line-height: 30px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
 #calendar.show {
   display: block;
 }
+
 .calendar-head {
-  background: #4285f4;
+  background-color: #3794d1;
   color: #fff;
+  border-radius: 6px 6px 0 0;
 }
+
 #content {
-  margin-bottom: 10px;
+  margin: 0 10px 10px;
 }
+
 .header {
   text-align: center;
+  cursor: pointer;
 }
+
+paper-icon-button {
+  margin: 0 !important;
+}
+
+.days, .months, .years {
+  height: 40px;
+  line-height: 40px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; /* IE10+ */
+  user-select: none;
+}
+
+.days:hover, .months:hover, .years:hover {
+  background-color: #dadada;
+}
+
 .days {
   width: 40px;
+  border-radius: 50%;
+  margin: 3px 1px; /* for old browsers*/
+  margin: 3px calc(10px / 7);
 }
+
 .days.fade {
   color: #c9c9c9;
 }
+
 .months {
   width: 100px;
+  margin: 5px 0;
+  border-radius: 4px;
 }
 
 .years {
   width: 60px;
+  margin: 5px 0;
+  border-radius: 4px;
 }
+
 .days.core-selected,
 .months.core-selected,
 .years.core-selected {
-  background-color: #c9c9c9;
-}
-
-paper-button.colored {
-  color: #4285f4;
-  fill: #4285f4;
-}
-
-paper-button[simpleButton].colored {
-  background: #4285f4;
+  background-color: #3794d1;
   color: #fff;
 }
+
+.today {
+  background: #3794d1;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; /* IE10+ */
+  user-select: none;
+}
+

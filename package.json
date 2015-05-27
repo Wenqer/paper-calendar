@@ -1,0 +1,20 @@
+{
+  "name": "paper-calendar",
+  "version": "0.0.3",
+  "description": "paper-calendar",
+  "main": "paper-calendar.js",
+  "scripts": {
+    "start": "./node_modules/polyserve/bin/polyserve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SphereConsultingInc/paper-calendar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SphereConsultingInc/paper-calendar/issues"
+  },
+  "homepage": "https://github.com/SphereConsultingInc/paper-calendar",
+  "devDependencies": {
+    "polyserve": "^0.4.0"
+  }
+}
